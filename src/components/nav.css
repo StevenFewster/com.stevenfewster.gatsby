@@ -1,0 +1,21 @@
+
+.nav-list {
+  @apply hidden overflow-x-hidden mr-10 font-semibold;
+}
+@screen md {
+  .nav-list {
+    @apply flex;
+  }
+}
+.nav-list-item {
+  @apply mr-6 p-2;
+}
+.nav-list-item a {
+  @apply text-white;
+}
+.nav-list-item a.active {
+  @apply border-b-2 border-orange-500
+}
+.nav-list-item a:hover {
+  @apply text-blue-300;
+}
