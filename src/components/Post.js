@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, Img } from "gatsby"
 import "./post.css"
 
-const Post = ({ title, author, date, description, path }) => (
+const Post = ({ title, author, date, description, path, cover }) => (
   <div className="post w-48 m-4 py-2 bg-white shadow-lg">
     <h3 className="post-title">{title}</h3>
     <p className="post-description">{description}</p>

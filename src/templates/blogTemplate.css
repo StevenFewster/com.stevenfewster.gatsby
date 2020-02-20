@@ -1,0 +1,8 @@
+/*.content {
+}*/
+.content-title {
+    @apply text-5xl mx-auto pt-3;
+}
+.content-posted-by {
+    @apply text-sm text-gray-600;
+}

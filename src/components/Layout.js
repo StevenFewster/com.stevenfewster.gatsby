@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-import Nav from "./Nav"
 import Seo from "./Seo"
+import Header from "./Header/Header"
 
 import "typeface-open-sans";
 import "typeface-comfortaa";
@@ -10,7 +9,7 @@ import "./layout.css"
 
 const Layout = ({ children }) => (
   <div className="layout">
-    <Nav />
+    <Header />
     <main className="main">{children}</main>
     <Seo />
   </div>

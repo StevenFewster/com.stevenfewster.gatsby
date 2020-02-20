@@ -1,0 +1,13 @@
+#header {
+    text-align: center;
+}
+#header h1 {
+    text-transform: uppercase;
+    font-weight: 200;
+    display: inline-block;
+    @apply text-4xl font-sans py-4 w-full border border-gray-400;
+}
+#header img {
+    display: inline-block;
+    vertical-align: text-top;
+}

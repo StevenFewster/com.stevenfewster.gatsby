@@ -1,5 +1,9 @@
 const path = require("path")
 
+const formatTitle = (title) => {
+  return title.toLowerCase().replace(/ /g, '-');
+}
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
@@ -11,6 +15,8 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
+              title
+              category
               path
             }
           }
@@ -23,8 +29,11 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const path = node.frontmatter.path ?
+        node.frontmatter.path :
+        `/${node.frontmatter.category}/${formatTitle(node.frontmatter.title)}`
       createPage({
-        path: node.frontmatter.path,
+        path,
         component: postTemplate,
       })
     })
