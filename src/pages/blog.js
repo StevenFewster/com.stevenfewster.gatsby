@@ -11,7 +11,7 @@ const Blog = ({ data }) => (
       <h1 class="section-title">Blog</h1>
     </div>
     {data.allMarkdownRemark.edges.map(post => {
-      const { title, author, date, description, path } = post.node.frontmatter
+      const { title, author, date, description, path, cover } = post.node.frontmatter
       return (
         <Post
           title={title}
@@ -20,6 +20,7 @@ const Blog = ({ data }) => (
           description={description}
           key={`${date}__${title}`}
           path={path}
+          cover={cover.childImageSharp.fluid}
         />
       )
     })}
@@ -39,6 +40,13 @@ export const AllBlogQuery = graphql`
             author
             description
             path
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

@@ -11,6 +11,7 @@ const Header = () => (
     <header className="layout">
       <Link to="/">
         <h1>Steven <img src="/static/21b8314b00ec60349f9d9cb2cf455a8e/151a9/logo.png" height="48" width="48" /> Fewster</h1>
+        <Img fluid={logo} />
       </Link>
       <Nav />
     </header>

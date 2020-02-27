@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql, Img } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/Layout"
 
@@ -11,8 +12,8 @@ export default function Template({ data }) {
 
   return (
     <Layout className={category}>
-      <div className="content">
       <Img fluid={cover.childImageSharp.fluid} />
+      <div className="content">
         <div className="container mx-auto">
           <h1 className="content-title">{title}</h1>
           <p className="content-posted-by">
@@ -36,7 +37,7 @@ export const postQuery = graphql`
         path
         cover {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
             }
           }

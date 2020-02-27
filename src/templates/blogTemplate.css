@@ -6,3 +6,13 @@
 .content-posted-by {
     @apply text-sm text-gray-600;
 }
+.main > .gatsby-image-wrapper {
+    height: 41.66vh;
+    margin-bottom: -12vh;
+}
+.gatsby-image-wrapper + .content {
+    position: relative;
+}
+.gatsby-image-wrapper + .content > .container {
+    background-color: rgba(255, 255, 255, 0.8);
+}

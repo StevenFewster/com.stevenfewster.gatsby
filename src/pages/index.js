@@ -1,56 +1,51 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
+import Post from '../components/Post'
 
 
-const Home = () => {
-  const img = useStaticQuery(graphql`
-    query ImageQuery {
-      file(relativePath: { eq: "images/blueberries.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+const Home = ({ data }) => (
+  <Layout>
+    {data.allMarkdownRemark.edges.map(post => {
+      const { title, author, date, description, path, cover } = post.node.frontmatter
+      return (
+        <Post
+          title={title}
+          author={author}
+          date={date}
+          description={description}
+          key={`${date}__${title}`}
+          path={path}
+          cover={cover.childImageSharp.fluid}
+        />
+      )
+    })}
+  </Layout>
+)
+
+export default Home
+
+export const AllIndexQuery = graphql`
+  query AllIndexPosts {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            date
+            title
+            author
+            description
+            path
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
-  `)
-  return (
-    <Layout>
-      <h1>Home</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-        aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-        accusantium, est nostrum esse minus iure voluptatum nihil cumque
-        blanditiis non? Odit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-        aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-        accusantium, est nostrum esse minus iure voluptatum nihil cumque
-        blanditiis non? Odit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-        aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-        accusantium, est nostrum esse minus iure voluptatum nihil cumque
-        blanditiis non? Odit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-        aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-        accusantium, est nostrum esse minus iure voluptatum nihil cumque
-        blanditiis non? Odit.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos
-        aut consequuntur aspernatur corrupti ratione, odit similique tenetur
-        accusantium, est nostrum esse minus iure voluptatum nihil cumque
-        blanditiis non? Odit.
-      </p>
-    </Layout>
-  )
-}
-
-export default Home
+  }
+`
