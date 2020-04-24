@@ -4,7 +4,7 @@ import Seo from "./Seo"
 import Header from "./Header/Header"
 
 import "typeface-open-sans";
-import "typeface-comfortaa";
+import "typeface-special-elite";
 import "./layout.css"
 
 const Layout = ({ children }) => (

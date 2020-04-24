@@ -1,6 +1,6 @@
 /*.content {
 }*/
-.content-title {
+/* .content-title {
     @apply text-5xl mx-auto pt-3;
 }
 .content-posted-by {
@@ -15,4 +15,4 @@
 }
 .gatsby-image-wrapper + .content > .container {
     background-color: rgba(255, 255, 255, 0.8);
-}
+} */
