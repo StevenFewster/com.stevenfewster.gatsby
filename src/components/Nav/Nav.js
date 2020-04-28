@@ -7,22 +7,22 @@ const Nav = () => (
   <div class="container mx-auto items-center">
       <ul className="nav-list flex justify-between">
         <li className="nav-list-item">
-          <Link activeClassName="active" to="/">
+          <Link activeClassName="active" to="/cocktails">
             Cocktails
           </Link>
         </li>
         <li className="nav-list-item">
-          <Link activeClassName="active" to="/about">
+          <Link activeClassName="active" to="/code">
             Code
           </Link>
         </li>
         <li className="nav-list-item">
-          <Link activeClassName="active" to="/blog">
+          <Link activeClassName="active" to="/projects">
             Projects
           </Link>
         </li>
         <li className="nav-list-item">
-          <Link activeClassName="active" to="/contact">
+          <Link activeClassName="active" to="/editorials">
             Editorials
           </Link>
         </li>

@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: "Steven Fewster's Personal Blog for Cocktails, Code and Sundries", // <title>
   shortSiteTitle: "Steven Fewster Personal Site", // <title> ending for posts and pages
   siteDescription: "PersonalBlog is a GatsbyJS starter.",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
+  siteUrl: "https://stevenfewster.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",

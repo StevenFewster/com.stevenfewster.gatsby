@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "steven-fewster",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Steven Fewster's Personal Blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Steven Fewster <steven.fewster@gmail.com>",
   "dependencies": {
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.40",

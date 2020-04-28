@@ -1,0 +1,29 @@
+/* .post-title {
+  @apply text-2xl;
+}
+.post {
+  position: relative;
+  height: 33vh;
+}
+.post-image {
+  position: absolute;
+  position: absolute;
+  height: 90%;
+  width: 95%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.post-details {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-color: -webkit-gradient(linear, left top, left bottom, from(#fff), to(rgba(255, 255, 255, 0.4)));
+    background-image: -webkit-linear-gradient(top, #fff, rgba(255, 255, 255, 0.9));
+    background-image: -moz-linear-gradient(top, #fff, rgba(255, 255, 255, 0.9));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+    padding: 1rem;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: 95%;
+} */

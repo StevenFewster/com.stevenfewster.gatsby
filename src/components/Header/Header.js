@@ -1,21 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Nav from "../Nav/Nav"
 
 import "./header.css"
-import logo from "../../images/logo.png"
 
-const Header = () => (
-  <div id="header">
-    <header className="layout">
-      <Link to="/">
-        <h1>Steven <img src="/static/21b8314b00ec60349f9d9cb2cf455a8e/151a9/logo.png" height="48" width="48" /> Fewster</h1>
-        <Img fluid={logo} />
-      </Link>
-      <Nav />
-    </header>
-  </div>
-)
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 48, height: 48) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <div id="header">
+      <header className="layout">
+        <Link to="/">
+          <h1>
+            <Img fixed={data.file.childImageSharp.fixed} alt="SF" title="The Steven Fewster Blog" />
+            </h1>
+        </Link>
+        <Nav />
+      </header>
+    </div>
+  )}
 
 export default Header
