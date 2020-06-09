@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/Layout/Layout"
 
-import "./blogTemplate.css"
+import "./blog.css"
 
 export default function Template({ data }) {
   const post = data.markdownRemark

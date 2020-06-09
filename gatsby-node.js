@@ -1,4 +1,4 @@
-const path = require("path")
+const fspath = require("path")
 
 const formatTitle = (title) => {
   return title.toLowerCase().replace(/ /g, '-');
@@ -6,8 +6,6 @@ const formatTitle = (title) => {
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-
-  const postTemplate = path.resolve("src/templates/blogTemplate.js")
 
   return graphql(`
     {
@@ -18,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               title
               category
               path
+              template
             }
           }
         }
@@ -29,12 +28,17 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+      const tmpl = node.frontmatter.template ?
+        fspath.resolve("src/templates/" + node.frontmatter.template + ".tmpl.js"):
+        fspath.resolve("src/templates/blog.tmpl.js");
+
       const path = node.frontmatter.path ?
         node.frontmatter.path :
         `/${node.frontmatter.category}/${formatTitle(node.frontmatter.title)}`
       createPage({
         path,
-        component: postTemplate,
+        component: tmpl,
       })
     })
   })

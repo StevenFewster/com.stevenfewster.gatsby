@@ -1,5 +1,6 @@
 ---
 path: "/editorials/street-art-south-america"
+template: "gallery"
 date: "2014-09-01"
 title: Street Art From South America
 description: Some photos of the interesting graffiti in South America

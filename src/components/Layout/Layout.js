@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Seo from "./../Seo"
+import Seo from "./../Seo/Seo"
 import Header from "./../Header/Header"
 
 import "typeface-open-sans";
