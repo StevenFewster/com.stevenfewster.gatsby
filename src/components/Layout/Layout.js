@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Seo from "./../Seo/Seo"
 import Header from "./../Header/Header"
+import Footer from "./../Footer/Footer"
 
 import "typeface-open-sans";
 import "typeface-special-elite";
@@ -11,6 +12,7 @@ const Layout = ({ children }) => (
   <div className="layout">
     <Header />
     <main className="main">{children}</main>
+    <Footer />
     <Seo />
   </div>
 )
