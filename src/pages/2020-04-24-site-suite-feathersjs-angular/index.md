@@ -5,7 +5,7 @@ title: FeathersJS/Angular App for Managing Logos
 description: "Creating a Javascript application to manage internal sites and provide a consistent set of logos"
 author: "Steven Fewster"
 category: "projects"
-cover: mac-and-code.jpg
+cover: slidebean-hYN111MD_-M-unsplash.jpg
 ---
 
 The benefit of working on hobby projects is that there's no one to hold you to account.  It can also be a problem for very obvious reasons!  So with this new one, let's eat my own dog food and start with the question (and publish the answer) to the question that should be driving every project you ever work on.

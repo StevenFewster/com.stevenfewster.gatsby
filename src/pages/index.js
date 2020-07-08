@@ -3,41 +3,44 @@ import Layout from "../components/Layout/Layout"
 import { graphql } from "gatsby"
 import Hero from '../components/Hero/Hero'
 import Post from '../components/Post/Post'
+import Primary from '../components/Primary/Primary'
 import Card from '../components/Card/Card'
 
 const Home = ({ data }) => (
   <Layout>
-    {data.allMarkdownRemark.edges.map((post, i) => {
-      const { title, author, date, description, path, cover, category } = post.node.frontmatter
-      switch (i) {
-        case 0:
-          return (
-            <Hero
-              title={title}
-              author={author}
-              date={date}
-              description={description}
-              key={`${date}__${title}`}
-              path={path}
-              category={category}
-              cover={cover.childImageSharp.fluid}
-            />
-          )
-        default:
-          return (
-            <Card
-              title={title}
-              author={author}
-              date={date}
-              description={description}
-              key={`${date}__${title}`}
-              path={path}
-              category={category}
-              cover={cover.childImageSharp.fluid}
-            />
-          )
-      }
-    })}
+    <div class="flex flex-wrap">
+      {data.allMarkdownRemark.edges.map((post, i) => {
+        const { title, author, date, description, path, cover, category } = post.node.frontmatter
+        switch (i) {
+          case 0:
+            return (
+              <Primary
+                title={title}
+                author={author}
+                date={date}
+                description={description}
+                key={`${date}__${title}`}
+                path={path}
+                category={category}
+                cover={cover.childImageSharp.fluid}
+              />
+            )
+          default:
+            return (
+              <Card
+                title={title}
+                author={author}
+                date={date}
+                description={description}
+                key={`${date}__${title}`}
+                path={path}
+                category={category}
+                cover={cover.childImageSharp.fluid}
+              />
+            )
+        }
+      })}
+    </div>
   </Layout>
 )
 
@@ -46,6 +49,7 @@ export default Home
 export const AllIndexQuery = graphql`
   query AllIndexPosts {
     allMarkdownRemark(
+      limit: 6
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {

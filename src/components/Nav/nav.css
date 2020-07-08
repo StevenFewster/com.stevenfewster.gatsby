@@ -1,3 +1,9 @@
+.nav-list {
+  @apply mr-5 ml-5;
+}
+.nav-list-item {
+  @apply uppercase;
+}
 
 /* .nav-list {
   @apply hidden overflow-x-hidden mr-10 font-semibold;
