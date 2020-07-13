@@ -21,8 +21,10 @@ const Header = () => {
     <div id="header">
       <header className="layout">
         <Link to="/">
-          <h1>
+          <h1 class="text-center uppercase blog-title">
+            Steven
             <Img fixed={data.file.childImageSharp.fixed} alt="SF" title="The Steven Fewster Blog" />
+            Fewster
             </h1>
         </Link>
         <Nav />

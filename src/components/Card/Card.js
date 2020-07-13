@@ -4,8 +4,7 @@ import Img from "gatsby-image"
 
 const Card = ({ title, author, date, description, path, cover, category }) => (
     <div class="p-4 md:w-1/3">
-        <div class="h-full border-2 border-gray-200 rounded-lg overflow-hidden">
-          {/*<img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog" />*/}
+        <div class="h-full bg-yellow-200 overflow-hidden">
 
           <Img class="lg:h-48 md:h-36 w-full object-cover object-center" imgStyle={{objectFit: 'contain' }} fluid={cover} />
 
@@ -38,6 +37,7 @@ const Card = ({ title, author, date, description, path, cover, category }) => (
             </div>
           </div>
         </div>
-      </div>)
+      </div>
+      )
 
 export default Card;

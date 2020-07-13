@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/Layout/Layout"
+import PrevNext from "../components/PrevNext/PrevNext"
 
 import "./blog.css"
 
@@ -22,6 +23,9 @@ export default function Template({ data }) {
         </div>
         <div className="container mx-auto" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+
+      <PrevNext></PrevNext>
+      
     </Layout>
   )
 }

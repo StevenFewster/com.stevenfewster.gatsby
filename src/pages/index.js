@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Hero from '../components/Hero/Hero'
 import Post from '../components/Post/Post'
 import Primary from '../components/Primary/Primary'
+import Secondary from '../components/Secondary/Secondary'
 import Card from '../components/Card/Card'
 
 const Home = ({ data }) => (
@@ -15,6 +16,20 @@ const Home = ({ data }) => (
           case 0:
             return (
               <Primary
+                title={title}
+                author={author}
+                date={date}
+                description={description}
+                key={`${date}__${title}`}
+                path={path}
+                category={category}
+                cover={cover.childImageSharp.fluid}
+              />
+            )
+          case 1:
+          case 2:
+            return (
+              <Secondary
                 title={title}
                 author={author}
                 date={date}
