@@ -9,7 +9,7 @@ import Card from '../components/Card/Card'
 
 const Home = ({ data }) => (
   <Layout>
-    <div class="flex flex-wrap">
+    <div class="container mx-auto flex flex-wrap">
       {data.allMarkdownRemark.edges.map((post, i) => {
         const { title, author, date, description, path, cover, category } = post.node.frontmatter
         switch (i) {
