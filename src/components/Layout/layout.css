@@ -4,12 +4,6 @@
 
 @tailwind utilities;
 
-/* body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Special Elite', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
 
 p {
   @apply mb-2;
@@ -18,6 +12,14 @@ p {
 .content h2 {
   @apply text-2xl mt-3;
 }
+
+/* body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Special Elite', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 .content p {
   max-width: 768px;
 } */

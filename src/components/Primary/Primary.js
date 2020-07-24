@@ -9,7 +9,7 @@ const Primary = ({ title, author, date, description, path, cover, category }) =>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
 
         <Img class="lg:h-48 md:h-36 w-full object`-cover object-center" imgStyle={{objectFit: 'contain' }} fluid={cover} />`
-      {/*<img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />*/}
+        
     </div>
     <div class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center p-4">
         <h2 class="tracking-widest text-xs uppercase title-font font-medium text-gray-500 mb-1">{category}</h2>
