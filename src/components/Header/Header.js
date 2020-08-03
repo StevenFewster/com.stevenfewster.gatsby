@@ -21,10 +21,10 @@ const Header = () => {
     <div id="header">
       <header className="layout">
         <Link to="/">
-          <h1 class="text-center uppercase blog-title">
-            Steven
+          <h1 class="flex sm:justify-center uppercase blog-title">
+            <div class="hidden sm:block">Steven</div>
             <Img fixed={data.file.childImageSharp.fixed} alt="SF" title="The Steven Fewster Blog" />
-            Fewster
+            <div class="hidden sm:block">Fewster</div>
             </h1>
         </Link>
         <Nav />

@@ -14,7 +14,7 @@ export default function Template({ data }) {
   return (
     <Layout className={category}>
       <Img fluid={cover.childImageSharp.fluid} />
-      <div className="content prose lg:prose-xl">
+      <div className="content mx-auto prose lg:prose-xl">
         <div className="container mx-auto">
           <h1 className="content-title">{title}</h1>
           <p className="content-posted-by">
