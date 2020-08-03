@@ -4,7 +4,8 @@ import Seo from "./../Seo/Seo"
 import Header from "./../Header/Header"
 import Footer from "./../Footer/Footer"
 
-import "typeface-open-sans";
+import "typeface-merriweather";
+import "typeface-montserrat";
 import "typeface-special-elite";
 import "./layout.css"
 

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Steven Fewster <steven.fewster@gmail.com>",
   "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-categories": "^2.3.7",
@@ -14,7 +15,6 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-tags": "^2.3.7",
-    "gatsby-plugin-typography": "^2.5.10",
     "gatsby-remark-images": "^3.3.8",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.45",
@@ -23,11 +23,10 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "react-typography": "^0.16.19",
-    "typeface-comfortaa": "^1.1.3",
-    "typeface-open-sans": "0.0.75",
-    "typeface-special-elite": "0.0.72",
-    "typography": "^0.16.19"
+    "typeface-merriweather": "0.0.72",
+    "typeface-montserrat": "0.0.75",
+    "typeface-raleway": "0.0.75",
+    "typeface-special-elite": "0.0.72"
   },
   "resolutions": {
     "sharp": "0.24.0"
