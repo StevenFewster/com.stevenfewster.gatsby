@@ -3,6 +3,21 @@
 }
 .nav-list-item {
   @apply uppercase;
+  position: relative;
+}
+.nav-list-item a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    transition: height 0.4s;
+}
+.nav-list-item a:hover:after {
+    height: 9px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: skew(4deg, -2deg);
 }
 
 /* .nav-list {

@@ -9,7 +9,10 @@ import ListItem from '../components/ListItem/ListItem'
 
 const Archive = ({ data }) => (
   <Layout>
-    <div class="container mx-auto flex flex-wrap">
+    <div class="bg-gray-900 text-white pt-5 pb-3 text-center">
+      <h1 class="text-4xl">Archive</h1>
+    </div>
+    <div class="container mx-auto px-5">
       {data.allMarkdownRemark.edges.map((post, i) => {
         const { title, author, date, description, path, cover, category } = post.node.frontmatter
         

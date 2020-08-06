@@ -5,7 +5,7 @@ import "./nav.css"
 
 const Nav = () => (
   <div class="container mx-auto items-center">
-      <ul className="nav-list flex justify-between">
+      <ul className="nav-list flex justify-between py-3">
         <li className="nav-list-item">
           <Link activeClassName="active" to="/cocktails">
             Cocktails
