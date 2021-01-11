@@ -4,9 +4,10 @@ import Seo from "./../Seo/Seo"
 import Header from "./../Header/Header"
 import Footer from "./../Footer/Footer"
 
-import "typeface-merriweather";
+// import "typeface-merriweather";
 import "typeface-montserrat";
 import "typeface-special-elite";
+import "typeface-antic-slab";
 import "./layout.css"
 
 const Layout = ({ children }) => (

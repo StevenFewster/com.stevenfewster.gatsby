@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import "./nav.css"
 
 const Nav = () => (
-  <div class="container mx-auto items-center">
+  <div class="container mx-auto items-center hidden sm:block">
       <ul className="nav-list flex justify-between py-3">
         <li className="nav-list-item">
           <Link activeClassName="active" to="/cocktails">

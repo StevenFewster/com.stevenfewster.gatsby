@@ -1,15 +1,16 @@
 import React from "react"
 import Layout from "../components/Layout/Layout"
 import { graphql } from "gatsby"
-import Post from "../components/Post/Post"
+import Card from "../components/Card/Card"
 
 
 const Home = ({ data }) => (
   <Layout>
+    <div class="container mx-auto flex flex-wrap">
     {data.allMarkdownRemark.edges.map(post => {
       const { title, author, date, description, path, cover } = post.node.frontmatter
       return (
-        <Post
+        <Card
           title={title}
           author={author}
           date={date}
@@ -20,6 +21,7 @@ const Home = ({ data }) => (
         />
       )
     })}
+    </div>
   </Layout>
 )
 
